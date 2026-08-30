@@ -1,0 +1,66 @@
+# Visual Studio
+.vs/
+*.user
+*.userosscache
+*.suo
+*.userprefs
+
+# Build
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+DebugPublic/
+ReleasePublic/
+
+# Visual Studio Code
+.vscode/
+
+# Rider
+.idea/
+*.sln.iml
+
+# NuGet
+*.nupkg
+*.snupkg
+packages/
+.nuget/
+
+# Logs
+*.log
+
+# Test results
+TestResults/
+[Tt]est[Rr]esult*/
+
+# ASP.NET Core
+wwwroot/lib/
+
+# Entity Framework
+*.db
+*.db-shm
+*.db-wal
+
+# User-specific / local configuration
+appsettings.Local.json
+appsettings.Development.json
+
+# Environment variables / secrets
+.env
+.env.*
+!.env.example
+
+# Publish
+publish/
+wwwroot/dist/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
+*.swp

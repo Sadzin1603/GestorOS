@@ -1,0 +1,43 @@
+﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
+namespace GestorOS.Models
+{
+    public class OrdemServico
+    {
+        public int Id { get; set; }
+
+        [Required(ErrorMessage = "O nome da oredm é obrigatório.")]
+        [StringLength(200)]
+        [Display(Name = "Descrição")]
+        public string Descricao { get; set; }
+
+        [StringLength(200)]
+        [Display(Name = "Observações")]
+        public string? Observacoes { get; set; }
+
+        [Required]
+        [Display(Name = "Data de Abertura")]
+        [DataType(DataType.Date)]
+        public DateTime DataAbertura { get; set; } = DateTime.Now;
+
+        [Display(Name = "Data de Conclusão")]
+        [DataType(DataType.Date)]
+        public DateTime? DataConclusao { get; set; }
+
+        [Display(Name = "Status")]
+        public StatusOrdem Status { get; set; }
+
+        [Required(ErrorMessage = "Informe o valor do serviço.")]
+        [Display(Name = "Valor (R$)")]
+        [Range(0, 999999.99, ErrorMessage = "O valor deve estar entre 00 e 999.999,99")]
+        [Column(TypeName = "decimal(10,2)")]
+        public decimal Valor { get; set; }
+
+        public int ClienteId { get; set; }
+        public Cliente? Cliente { get; set; }
+
+        public int? CategoriaServicoId { get; set; }
+        public CategoriaServico? CategoriaServico { get; set; }
+    }
+}
