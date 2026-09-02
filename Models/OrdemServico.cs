@@ -26,7 +26,7 @@ namespace GestorOS.Models
         public DateTime? DataConclusao { get; set; }
 
         [Display(Name = "Status")]
-        public StatusOrdem Status { get; set; }
+        public StatusOrdem Status { get; set; } = StatusOrdem.Aberta;
 
         [Required(ErrorMessage = "Informe o valor do serviço.")]
         [Display(Name = "Valor (R$)")]
